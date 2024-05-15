@@ -46,7 +46,17 @@
   };
 
   # Configure keymap in X11
-  #services.
+  services.xserver = {
+    enable = true;
+    displayManager.defaultSession = "none+i3";
+    desktopManager.xterm.enable = false;
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        dmenu i3lock i3status i3blocks
+      ];
+    };
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -60,7 +70,6 @@
     description = "gandalf";
     extraGroups = ["networkmanager" "wheel"];
   };
-
   environment.pathsToLink = [ "/share/zsh" ];
 
   environment.systemPackages = with pkgs; [
