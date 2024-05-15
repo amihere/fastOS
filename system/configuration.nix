@@ -65,10 +65,12 @@
   # $ nix search wget
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  programs.zsh.enable = true;
   users.users.g = {
     isNormalUser = true;
     description = "gandalf";
     extraGroups = ["networkmanager" "wheel"];
+    shell = pkgs.zsh;
   };
   environment.pathsToLink = [ "/share/zsh" ];
 
