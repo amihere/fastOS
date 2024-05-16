@@ -79,6 +79,7 @@
     vim 
     gnumake
     wget
+    rio
     unzip
     xclip
     clipmenu

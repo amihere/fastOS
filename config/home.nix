@@ -45,6 +45,9 @@
      ".tmux-sessionizer" = {
        source = ./tmux/.tmux-sessionizer;
      };
+     ".i3" = {
+       source = ./i3/i3-conf;
+     };
    };
    programs.home-manager.enable = true; 
 }
