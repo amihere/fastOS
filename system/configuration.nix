@@ -83,6 +83,7 @@
     unzip
     xclip
     clipmenu
+    # whitesur-gtk-theme
   ];
   environment.variables.EDITOR = "vim";
 

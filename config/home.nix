@@ -48,6 +48,10 @@
      ".i3" = {
        source = ./i3/i3-conf;
      };
+     ".config/" = {
+       source = ./neovim/nvim;
+       recursive = true;
+     };
    };
    programs.home-manager.enable = true; 
 }
