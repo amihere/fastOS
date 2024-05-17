@@ -45,7 +45,7 @@
      ".tmux-sessionizer" = {
        source = ./tmux/.tmux-sessionizer;
      };
-     ".i3" = {
+     ".config/i3/config" = {
        source = ./i3/i3-conf;
      };
      ".config/" = {

@@ -1,5 +1,5 @@
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 {
   imports =
@@ -8,10 +8,12 @@
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
   boot.loader.systemd-boot.configurationLimit = 10;
+
+  # hardware
+  hardware.bluetooth.enable = true;
 
   nix.gc = {
     automatic = true;
@@ -20,7 +22,7 @@
   };
 
   networking.hostName = "kyoto"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   virtualisation.virtualbox.guest.enable = true;
 
@@ -71,6 +73,7 @@
     description = "gandalf";
     extraGroups = ["networkmanager" "wheel"];
     shell = pkgs.zsh;
+    initialHashedPassword = "$y$j9T$aC1eYNk3P1CItjfG84rGe0$eFOzftIEHF3OdoauIczSSQdUKUDm8viaAeb892bDmc3";
   };
   environment.pathsToLink = [ "/share/zsh" ];
 
