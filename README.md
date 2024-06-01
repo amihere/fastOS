@@ -6,3 +6,4 @@
 - Tmux (coming soon)
 - Z SHell (git and z plugins setup with Nix + oh-my-zsh)
 - i3 (minimal config with keybindings made vim-like)
+- Java, Go Lang focused
