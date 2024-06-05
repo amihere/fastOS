@@ -14,23 +14,6 @@
   };
 
   outputs = inputs@{ nixpkgs, nixos-generators, home-manager, ... }: {
-    packages.x86_64-linux = {
-      iso = nixos-generators.nixosGenerate {
-        system = "x86_64-linux";
-        modules = [
-          ./system/configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.g = import ./config/home.nix;
-            home-manager.backupFileExtension = "backup";
-          }
-        ];
-        format = "iso";
-      };
-    };
-
     nixosConfigurations = {
       kyoto = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
