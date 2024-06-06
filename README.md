@@ -16,3 +16,7 @@ nix-shell -p wget
 wget https://github.com/amihere/fastOS/archive/refs/heads/main.zip && unzip main.zip && rm main.zip
 sudo nixos-rebuild switch --flake .#kyoto
 ```
+
+OR:  
+
+`nix --extra-experimental-features "nix-command flakes" build 'github:amihere/fastOS#nixosConfigurations.kyoto.config.system.build.toplevel'`
