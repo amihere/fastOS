@@ -20,3 +20,6 @@ sudo nixos-rebuild switch --flake .#kyoto
 OR:  
 
 `nix --extra-experimental-features "nix-command flakes" build 'github:amihere/fastOS#nixosConfigurations.kyoto.config.system.build.toplevel'`
+
+Revised:
+`nixos-rebuild switch --flake 'github:amihere/fastOS#kyoto'`
