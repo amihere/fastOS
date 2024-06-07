@@ -23,3 +23,5 @@ OR:
 
 Revised:
 `nixos-rebuild switch --flake 'github:amihere/fastOS#kyoto'`
+
+### include steps to setup from minimal os
